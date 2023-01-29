@@ -1,3 +1,5 @@
+local P = require("futurefunk.palette")
+
 local M = {}
 
 M.load = function()
@@ -6,95 +8,39 @@ M.load = function()
     vim.cmd([[hi clear]])
   end
 
-  -- {{{
   vim.o.termguicolors = true
-  vim.g.colors_name = "futurepunk"
+  vim.g.colors_name = "futurefunk"
   vim.o.background = "dark" -- TODO : light対応
-  -- }}}
-
-  local white = {
-    base = "#faeece",
-    shade = "#eaecc2",
-    tint = "#e9e9e9",
-  }
-
-  local gray = {
-    base = "#717077",
-    shade = "#4f4e53",
-    tint = "#8d8d92",
-  }
-
-  local black = {
-    base = "#282828",
-    shade = "#1c1c1c",
-    tint = "#3e3e3e",
-  }
-
-  local night = {
-    base = "#31486f",
-    shade = "#22324e",
-    tint = "#8391a9",
-  }
-
-  local blue = {
-    base = "#0673A2",
-    shade = "#055172",
-    tint = "#3F98BF",
-  }
-
-  local green = {
-    base = "#06A2A2",
-    shade = "#057272",
-    tint = "#3FBFBF",
-  }
-
-  local yellow = {
-    base = "#F9C05D",
-    shade = "#AF8741",
-    tint = "#FBD38D",
-  }
-
-  local orange = {
-    base = "#F98C5D",
-    shade = "#AF6241",
-    tint = "#FBAE8D",
-  }
-
-  local red = {
-    base = "#F95D5D",
-    shade = "#AF4141",
-    tint = "#FB8D8D",
-  }
 
   local groups = {
     -- for builtin
-    ColorColumn = { bg = red.base },
-    Conceal = { fg = black.tint, bg = gray.base },
+    ColorColumn = { bg = P.red.base },
+    Conceal = { fg = P.black.tint, bg = P.gray.base },
     CurSearch = { link = "Search" },
     -- Cursor = {},
     -- lCursor = {},
     -- CursorIM = {},
     -- CursorColumn = {},
-    CursorLine = { bg = black.shade },
+    CursorLine = { bg = P.black.shade },
     -- Directory = {},
-    DiffAdd = { fg = green.base },
-    DiffChange = { fg = yellow.base },
-    DiffDelete = { fg = red.base },
+    DiffAdd = { fg = P.green.base },
+    DiffChange = { fg = P.yellow.base },
+    DiffDelete = { fg = P.red.base },
     -- DiffText = {},
     -- EndOfBuffer = {},
     -- TermCursor = {},
     -- TermCursorNC = {},
     -- ErrorMsg = {},
     -- WinSeparator = {},
-    Folded = { fg = gray.base, bg = black.tint },
+    Folded = { fg = P.gray.base, bg = P.black.tint },
     -- FoldColumn = {},
     -- SignColumn = {},
     -- IncSearch = {},
     -- Substitute = {},
-    LineNr = { fg = yellow.base },
+    LineNr = { fg = P.yellow.base },
     -- LineNrAbove = {},
     -- LineNrBelow = {},
-    CursorLineNr = { fg = yellow.base, bold = true },
+    CursorLineNr = { fg = P.yellow.base, bold = true },
     -- CursorLineFold = {},
     -- CursorLineSign = {},
     -- MatchParen = {},
@@ -102,17 +48,17 @@ M.load = function()
     -- MsgArea = {},
     -- MsgSeparator = {},
     -- MoreMsg = {},
-    NonText = { bold = true, fg = night.base },
-    Normal = { fg = white.base, bg = black.base },
-    NormalFloat = { fg = white.base, bg = black.tint },
+    NonText = { bold = true, fg = P.night.base },
+    Normal = { fg = P.white.base, bg = P.black.base },
+    NormalFloat = { fg = P.white.base, bg = P.black.tint },
     -- NormalNC = {},
-    Pmenu = { bg = black.tint },
-    PmenuSel = { bg = night.shade },
+    Pmenu = { bg = P.black.tint },
+    PmenuSel = { bg = P.night.shade },
     -- PmenuSbar = {},
     -- PmenuThumb = {},
     -- Question = {},
     -- QuickFixLine = {},
-    Search = { bg = night.base },
+    Search = { bg = P.night.base },
     -- SpecialKey = {},
     -- SpellBad = {},
     -- SpellCap = {},
@@ -123,8 +69,8 @@ M.load = function()
     -- TabLine = {},
     -- TabLineFill = {},
     -- TabLineSel = {},
-    Title = { fg = red.base },
-    Visual = { bg = black.tint },
+    Title = { fg = P.red.base },
+    Visual = { bg = P.black.tint },
     -- VisualNOS = {},
     -- WarningMsg = {},
     -- Whitespace = {},
@@ -149,18 +95,18 @@ M.load = function()
     -- Tooltip = {},
 
     -- for syntax
-    Comment = { fg = gray.base }, -- preferred
-    Constant = { fg = red.tint }, -- preferred
-    String = { fg = blue.base },
+    Comment = { fg = P.gray.base }, -- preferred
+    Constant = { fg = P.red.tint }, -- preferred
+    String = { fg = P.blue.base },
     -- Character
     -- Number
     -- Boolean
     -- Float
 
-    Identifier = { fg = white.base }, -- preferred
-    Function = { fg = yellow.base },
+    Identifier = { fg = P.white.base }, -- preferred
+    Function = { fg = P.yellow.base },
 
-    Statement = { fg = red.base }, -- preferred
+    Statement = { fg = P.red.base }, -- preferred
     -- Conditional
     -- Repeat
     -- Label
@@ -168,18 +114,18 @@ M.load = function()
     -- Keyword
     -- Exception
 
-    PreProc = { fg = yellow.base }, -- preferred
+    PreProc = { fg = P.yellow.base }, -- preferred
     -- Include
     -- Define
     -- Macro
     -- PreCondit
 
-    Type = { fg = green.base }, -- preferred
+    Type = { fg = P.green.base }, -- preferred
     -- StorageClass
     -- Structure
-    Typedef = { fg = green.base },
+    Typedef = { fg = P.green.base },
 
-    Special = { fg = orange.base }, -- preferred
+    Special = { fg = P.orange.base }, -- preferred
     -- SpecialChar
     -- Tag
     -- Delimiter
@@ -197,9 +143,9 @@ M.load = function()
 
     -- for treesitter
     -- ["@function_declaration.result.type_identifier"] = { bg = red.base },
-    ["@function.builtin"] = { fg = red.tint },
-    ["@method.call"] = { fg = yellow.base },
-    ["@import.spec.list"] = { fg = white.base },
+    ["@function.builtin"] = { fg = P.red.tint },
+    ["@method.call"] = { fg = P.yellow.base },
+    ["@import.spec.list"] = { fg = P.white.base },
 
     -- for nvim-cmp
     -- CmpItemKind = { bg = deep },
@@ -212,14 +158,14 @@ M.load = function()
     -- for lualine
 
     -- for neotest
-    NeotestPassed = { fg = green.base },
-    NeotestRunning = { fg = yellow.base },
-    NeotestFailed = { fg = red.base },
-    NeotestSkipped = { fg = gray.base },
-    NeotestNamespace = { fg = red.base },
-    NeotestAdapterName = { fg = red.base, bold = true },
-    NeotestDir = { fg = blue.base },
-    NeotestFile = { fg = white.base, bold = true },
+    NeotestPassed = { fg = P.green.base },
+    NeotestRunning = { fg = P.yellow.base },
+    NeotestFailed = { fg = P.red.base },
+    NeotestSkipped = { fg = P.gray.base },
+    NeotestNamespace = { fg = P.red.base },
+    NeotestAdapterName = { fg = P.red.base, bold = true },
+    NeotestDir = { fg = P.blue.base },
+    NeotestFile = { fg = P.white.base, bold = true },
     -- NeotestTarget = { fg = white, bold = true },
   }
 
