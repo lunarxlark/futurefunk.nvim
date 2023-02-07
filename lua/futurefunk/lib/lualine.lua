@@ -2,23 +2,23 @@ local P = require("futurefunk.palette")
 
 return {
   normal = {
-    a = { bg = P.blue.shade, gui = "bold" },
-    b = { bg = P.blue.base },
+    a = { bg = P.night.shade, gui = "bold" },
+    b = { bg = P.night.base },
   },
 
   insert = {
-    a = { fg = P.black.tint, bg = P.yellow.shade, gui = "bold" },
-    b = { fg = P.black.base, bg = P.yellow.base },
+    a = { fg = P.right.shade, bg = P.yellow.shade, gui = "bold" },
+    b = { fg = P.orange.shade, bg = P.yellow.base },
   },
 
   command = {
-    a = { fg = P.white.base, bg = P.green.shade, gui = "bold" },
-    b = { bg = P.green.base },
+    a = { bg = P.night.shade, gui = "bold" },
+    b = { bg = P.night.base },
   },
 
   visual = {
-    a = { bg = P.red.shade, gui = "bold" },
-    b = { bg = P.red.base },
+    a = { fg = P.red.shade, bg = P.magenda.shade, gui = "bold" },
+    b = { fg = P.red.shade, bg = P.magenda.base },
   },
 
   replace = {
