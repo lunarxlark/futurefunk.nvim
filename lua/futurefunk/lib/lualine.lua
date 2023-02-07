@@ -7,7 +7,7 @@ return {
   },
 
   insert = {
-    a = { fg = P.right.shade, bg = P.yellow.shade, gui = "bold" },
+    a = { fg = P.night.shade, bg = P.yellow.shade, gui = "bold" },
     b = { fg = P.orange.shade, bg = P.yellow.base },
   },
 
