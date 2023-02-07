@@ -12,8 +12,8 @@ local palette = {
   },
 
   black = {
-    base = "#040F1C",
-    shade = "#08041C",
+    base = "#040C1C",
+    shade = "#04061C",
     tint = "#151C36",
   },
 
