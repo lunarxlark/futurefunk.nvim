@@ -22,7 +22,7 @@ M.load = function()
     -- CursorIM = {},
     -- CursorColumn = {},
     CursorLine = { bg = P.black.shade },
-    -- Directory = {},
+    Directory = { fg = P.blue.base },
     DiffAdd = { fg = P.green.base },
     DiffChange = { fg = P.yellow.base },
     DiffDelete = { fg = P.red.base },
@@ -37,7 +37,7 @@ M.load = function()
     -- SignColumn = {},
     -- IncSearch = {},
     -- Substitute = {},
-    LineNr = { fg = P.yellow.base },
+    LineNr = { fg = P.yellow.tint },
     -- LineNrAbove = {},
     -- LineNrBelow = {},
     CursorLineNr = { fg = P.yellow.base, bold = true },
@@ -97,7 +97,7 @@ M.load = function()
     -- for syntax
     Comment = { fg = P.gray.base }, -- preferred
     Constant = { fg = P.red.tint }, -- preferred
-    String = { fg = P.blue.base },
+    String = { fg = P.green.base },
     -- Character
     -- Number
     -- Boolean
@@ -170,6 +170,9 @@ M.load = function()
 
     -- tabline
     -- TabLineFill = {}
+
+    -- NvimTree
+    NvimTreeGitNew = { link = "DiffAdd" },
   }
 
   for group, opt in pairs(groups) do

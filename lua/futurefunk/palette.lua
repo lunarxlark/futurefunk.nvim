@@ -24,21 +24,21 @@ local palette = {
   },
 
   blue = {
+    base = "#389ced",
+    shade = "#6eaad9",
+    tint = "#84b4f6",
+  },
+
+  green = {
     base = "#50c5cd",
     shade = "#055172",
     tint = "#3F98BF",
   },
 
-  green = {
-    base = "#06A2A2",
-    shade = "#057272",
-    tint = "#3FBFBF",
-  },
-
   yellow = {
     base = "#F9C05D",
     shade = "#AF8741",
-    tint = "#FBD38D",
+    tint = "#FBDE9C",
   },
 
   orange = {
