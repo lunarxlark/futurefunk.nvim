@@ -167,6 +167,9 @@ M.load = function()
     NeotestDir = { fg = P.blue.base },
     NeotestFile = { fg = P.white.base, bold = true },
     -- NeotestTarget = { fg = white, bold = true },
+
+    -- tabline
+    -- TabLineFill = {}
   }
 
   for group, opt in pairs(groups) do

@@ -7,13 +7,13 @@ return {
   },
 
   insert = {
-    a = { bg = P.green.shade, gui = "bold" },
-    b = { bg = P.green.base },
+    a = { fg = P.black.tint, bg = P.yellow.shade, gui = "bold" },
+    b = { fg = P.black.base, bg = P.yellow.base },
   },
 
   command = {
-    a = { bg = P.yellow.shade, gui = "bold" },
-    b = { bg = P.yellow.base },
+    a = { fg = P.white.base, bg = P.green.shade, gui = "bold" },
+    b = { bg = P.green.base },
   },
 
   visual = {
