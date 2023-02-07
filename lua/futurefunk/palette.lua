@@ -1,7 +1,7 @@
 local palette = {
   white = {
-    base = "#faeece",
-    shade = "#eaecc2",
+    base = "#fdf3ce",
+    shade = "#faece9",
     tint = "#e9e9e9",
   },
 
@@ -12,9 +12,9 @@ local palette = {
   },
 
   black = {
-    base = "#282828",
-    shade = "#1c1c1c",
-    tint = "#3e3e3e",
+    base = "#040F1C",
+    shade = "#08041C",
+    tint = "#151C36",
   },
 
   night = {
@@ -24,7 +24,7 @@ local palette = {
   },
 
   blue = {
-    base = "#0673A2",
+    base = "#50c5cd",
     shade = "#055172",
     tint = "#3F98BF",
   },
@@ -51,6 +51,12 @@ local palette = {
     base = "#F95D5D",
     shade = "#AF4141",
     tint = "#FB8D8D",
+  },
+
+  magenda = {
+    base = "#f4b5bc",
+    shade = "#df8298",
+    tint = "#fbb2b5",
   },
 }
 
