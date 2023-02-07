@@ -8,11 +8,14 @@ import (
 
 func main() {
 
+	/*
+	 * create http request
+	 */
 	resp, err := http.Get("https://gobyexample.com")
 	if err != nil {
 		panic(err)
 	}
-	defer resp.Body.Close()
+	defer resp.Body.Close() // nice defer
 
 	fmt.Println("Response status:", resp.Status)
 
