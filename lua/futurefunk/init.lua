@@ -58,7 +58,7 @@ M.load = function()
     -- PmenuThumb = {},
     -- Question = {},
     -- QuickFixLine = {},
-    Search = { bg = P.night.base },
+    Search = { bg = P.night.shade },
     -- SpecialKey = {},
     -- SpellBad = {},
     -- SpellCap = {},

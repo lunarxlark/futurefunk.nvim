@@ -2,29 +2,29 @@ package main
 
 import (
 	"bufio"
-	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
+	request()
+}
 
-	/*
-	 * create http request
-	 */
-	resp, err := http.Get("https://gobyexample.com")
+// request
+func request() error {
+	resp, err := http.Get("https://example.com")
 	if err != nil {
-		panic(err)
+		return err
 	}
-	defer resp.Body.Close() // nice defer
-
-	fmt.Println("Response status:", resp.Status)
+	defer resp.Body.Close()
 
 	scanner := bufio.NewScanner(resp.Body)
 	for i := 0; scanner.Scan() && i < 5; i++ {
-		fmt.Println(scanner.Text())
+		log.Println(scanner.Text())
 	}
 
 	if err := scanner.Err(); err != nil {
-		panic(err)
+		return err
 	}
+	return nil
 }
